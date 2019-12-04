@@ -1,15 +1,19 @@
-// Define "gameState" here
+$( document ).ready(function() {
+  console.log( "game.js loaded" );
+});
+
+// Defining "gameState"
 const gameState = {};
 
 function create() {
   gameState.circle = this.add.circle(20, 20, 5, 0xff0000);
   
-  // Create a circle and assign it to gameState.circle here
+  // Creating the circle and assigning it to gameState.circle
 
 }
 
 function update() {
-  // Update the circle in gameState.circle here
+  // Updating circle in gameState.circle
  gameState.circle.y += 1;
    gameState.circle.x += 1;
 
@@ -17,7 +21,7 @@ function update() {
 
 const config = {
 	type: Phaser.AUTO,
-	width: 450,
+	width: 500,
 	height: 600,
 	backgroundColor: "#99ff99",
 	scene: {
@@ -27,3 +31,34 @@ const config = {
 }
 
 const game = new Phaser.Game(config)
+
+//-------------scratch work-----------//
+
+
+//----------------Goals------------------
+      //Continue to work on reloading only this div, so the circle continually moves.
+
+        //Try One
+
+            // function updateDiv()
+            // { 
+            //     $( ".circleDiv" ).load(window.location.href + " .circleDiv" );
+            // }
+
+            // updateDiv();
+
+        //Try Two
+
+
+            // function updateDiv()
+            //  { 
+            // $(".circleDiv").load(".circleDiv");
+            // }
+            // updateDiv();
+
+
+// CONSOLE SAYS ITS A CORS ISSUES...ALSO, DOES PHASER WORK ON CHROME?
+//----------End scratch work-------------//
+
+
+
