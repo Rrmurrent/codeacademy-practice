@@ -1,4 +1,12 @@
 // Wow! It was a lot to cover. Saving my work for now, but plan on revisiting next coding session!! 
+// Goals for this assignment: 
+  //1. Add more colors to color palette.
+  //2. Add dif background/add ability to color in background 
+  //3. Figure out how to use my own sprite/images---look up curves built into phaser
+  //4. Music/soundeffects?
+  //5. 
+
+  
 $( document ).ready(function() {
   console.log( "game4.js loaded" );
 });
