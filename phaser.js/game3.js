@@ -1,3 +1,8 @@
+$( document ).ready(function() {
+    console.log( "game3.js loaded" );
+    
+  });
+
 const gameStater = {}
 
 function preload() {

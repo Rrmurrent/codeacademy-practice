@@ -1,5 +1,7 @@
 // Wow! It was a lot to cover. Saving my work for now, but plan on revisiting next coding session!! 
-
+$( document ).ready(function() {
+  console.log( "game4.js loaded" );
+});
 
 let gameStateR4 = {
   palette: [0xa7f66c, 0x844cc5, 0x66e2e2, 0x4c7df3, 0xffc836, 0xec32fc],
