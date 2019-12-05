@@ -87,7 +87,7 @@ const game = new Phaser.Game(config)
 
 
 //----------------Goals------------------
-      //Continue to work on reloading only this div, so the circle continually moves.
+      //1. Continue to work on reloading only this div, so the circle continually moves.
 
         //Try One
 
@@ -109,6 +109,11 @@ const game = new Phaser.Game(config)
 
 
 // CONSOLE SAYS ITS A CORS ISSUES...ALSO, DOES PHASER WORK ON CHROME?
+
+      //2. When sprite moves over button, que the audio. 
+      //3. Change sprite
+      //4. Change Audio--research local files + Phaser
+      //5. Make game
 //----------End scratch work-------------//
 
 
