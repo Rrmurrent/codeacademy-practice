@@ -61,7 +61,7 @@ function create ()
         for (let circle of gameStateR4.paletteCircles) {
           circle.strokeColor = 0x000000;
         }
-  //  Of ot os the same color, outline palette circle in gold
+  //  Of it os the same color, outline palette circle in gold
         this.paletteCircle.strokeColor = 0xffc836; 
       }
     }, { paletteCircle, color })
