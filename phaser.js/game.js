@@ -23,28 +23,7 @@ function create() {
   gameState.cursors=
   this.input.keyboard.createCursorKeys();
 
-  gameState.incredible = this.sound.add('incredible')
-  gameState.awesome = this.sound.add('awesome')
-  
-  // Display "Incredible" and "Really, really awesome" buttons
-  
-  gameState.incredibleBox = this.add.rectangle(200, 150, 300, 200, 0xdadaaa)
-  gameState.awesomeBox = this.add.rectangle(200, 400, 300, 200, 0xaadada)
-  
-  gameState.incredibleText = this.add.text(150, 135, "Incredible", { fill: "#222222", font: "20px Times New Roman"})
-  gameState.awesomeText = this.add.text(110, 385, "Really, really awesome", { fill: "#222222", font: "20px Times New Roman"})
-  
-  gameState.incredibleBox.setInteractive();
-  gameState.incredible = this.sound.add('incredible');
-  gameState.incredibleBox.on('pointerup', function() {
-  gameState.incredible.play();
-  })
 
-  gameState.awesomeBox.setInteractive();
-
-  gameState.awesomeBox.on('pointerup', function() {
-    gameState.awesome.play()
-  })
 }
 
 function update() {
@@ -71,8 +50,8 @@ function update() {
 
 const config = {
 	type: Phaser.AUTO,
-	width: 1000,
-	height: 1200,
+	width: 500,
+	height: 600,
 	backgroundColor: "#99ff99",
 	scene: {
     preload,
