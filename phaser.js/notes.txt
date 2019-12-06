@@ -1,0 +1,81 @@
+Notes on Pegasus  12/6/19
+
+
+game.js--Line 10 contains forloop
+    -- The for loop function also contains commands to describe the presentation of Pegasus. 
+        --strokeColor
+        --lineWidth
+        --shapes interactability
+          --gameState.shape.setInteractive();     line 18
+
+The shapes that the user clicks on should change color. Create handler (pointerUp)
+    --/*pointerup handler */
+    gameState.shape.on('pointerup', function(){
+    gameState.this.fillColor = gameState.selectedColor
+ })   
+
+this.fillColor = gameState.selectedColor  is what causes the shape color to change. 
+
+
+** Making the palette user friendly(selector functional) **
+
+
+    Goal: When the user clicks on a color, that color becomes the selected color.
+
+
+        Use a third argument to our event handler method .on(), where we give extra context to be used within our event handler. 
+        Each circle in our color palette, paletteCircle, should be aware of the color that it indicates so that it can update gameState.selectedColor. 
+
+
+
+         gameState.paletteCircle.setInteractive();
+        paletteCircle.on('pointerup',function() {
+        this.gameState.selectedColor = this.color----In this line we are updating gameState.selectedColor to be the new color we pass as context.
+        },{ color, paletteCircle }); ---------{color} is the third argument to paletteCircle.on
+        }
+        }
+
+** screen blend mode **
+    Using screen blend mode to indiciate which part of the Pegasus is going to be selected. 
+    
+    Blend modes dictation how to fill-in shape interacts with the other shapes visible, somewhat like changing the opacity and color of the shape.
+    The result will be that our highlighted section will turn semi-transparent and white with a white outline.
+
+
+                shape.on('pointerup', function() { 
+                this.fillColor = gameState.selectedColor;
+                });
+                
+            **  pointerover & pointerout handlers are here **
+
+                shape.on('pointerover', function() {
+                this.setBlendMode(Phaser.BlendModes.SCREEN)
+                })
+            }
+
+            ** sets the shapes blend mode back to normal after we stop hovering over it. **
+                shape.on('pointerout', function() {
+                this.setBlendMode(Phaser.BlendModes.NORMAL)
+                })
+
+
+** Keep track of what color is currently active by adding relevant hover events to our paletteCircles **
+
+
+ this.paletteCircle.strokeColor = 0x000000;--- line 39 sets the default of strokeColor to black
+
+            ** pointerout event to paletteCircle
+                paletteCircle.on('pointerout', function() {
+                },{ paletteCircle, color }); --lets it access color as well as paletteCircle
+    
+            ** if statement that compares our selected color with this.color
+
+            ** if the color of the paletteCircle is the same color as gameState.selectedColor, it will give the paletteCircle a gold outline.
+                if (gameState.selectedColor === this.color) {
+                    this.paletteCircle.strokeColor = 0xffc836;
+                }
+                    
+                    
+                }
+
+                }
