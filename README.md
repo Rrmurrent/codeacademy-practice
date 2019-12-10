@@ -1,6 +1,8 @@
 # Codeacademy-practice
 As long as you never give up, there is no such thing as failure.
 
+https://rrmurrent.github.io/codeacademy-practice/index
+
 ## Motivation
 
 <table>
